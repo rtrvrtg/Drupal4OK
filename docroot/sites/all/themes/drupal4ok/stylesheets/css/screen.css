@@ -363,6 +363,15 @@ table {
   border-spacing: 0;
 }
 
+* html {
+  font-size: 87.5%;
+}
+
+html {
+  font-size: 14px;
+  line-height: 1.14286em;
+}
+
 .input_tiny {
   width: 50px;
 }
@@ -444,7 +453,7 @@ input[type="button"] {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #dddddd;
+  background: #dddddd url('../../images/button.png?1369207369') repeat-x;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(#ffffff, #dddddd);
   background-image: -moz-linear-gradient(#ffffff, #dddddd);
@@ -678,7 +687,7 @@ optgroup::-moz-focus-inner {
 .ie6_button,
 * html button,
 * html a.button {
-  background: #dddddd url('../../images/button.png') repeat-x;
+  background: #dddddd url('../../images/button.png?1369207369') repeat-x;
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
@@ -727,4 +736,21 @@ optgroup::-moz-focus-inner {
 
 .ie6_input_disabled {
   background: #eeeeee;
+}
+
+body, html {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+
+td {
+  padding: 0.25em;
+}
+
+#page-wrapper {
+  max-width: 60em;
+  margin: auto;
 }

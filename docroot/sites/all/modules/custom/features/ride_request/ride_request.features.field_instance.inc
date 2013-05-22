@@ -10,6 +10,207 @@
 function ride_request_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-ride_request-field_person_contact_pref'
+  $field_instances['node-ride_request-field_person_contact_pref'] = array(
+    'bundle' => 'ride_request',
+    'default_value' => array(
+      0 => array(
+        'value' => 'voice',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_person_contact_pref',
+    'label' => 'I prefer to be contacted by',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-ride_request-field_person_email'
+  $field_instances['node-ride_request-field_person_email'] = array(
+    'bundle' => 'ride_request',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_person_email',
+    'label' => 'Email',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-ride_request-field_person_language'
+  $field_instances['node-ride_request-field_person_language'] = array(
+    'bundle' => 'ride_request',
+    'default_value' => array(
+      0 => array(
+        'value' => 'english',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_person_language',
+    'label' => 'Language',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-ride_request-field_person_name'
+  $field_instances['node-ride_request-field_person_name'] = array(
+    'bundle' => 'ride_request',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_person_name',
+    'label' => 'Name',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-ride_request-field_person_phone_number'
+  $field_instances['node-ride_request-field_person_phone_number'] = array(
+    'bundle' => 'ride_request',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_person_phone_number',
+    'label' => 'Phone Number',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-ride_request-field_ride_accomodations'
   $field_instances['node-ride_request-field_ride_accomodations'] = array(
     'bundle' => 'ride_request',
@@ -47,47 +248,6 @@ function ride_request_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-ride_request-field_ride_contact_pref'
-  $field_instances['node-ride_request-field_ride_contact_pref'] = array(
-    'bundle' => 'ride_request',
-    'default_value' => array(
-      0 => array(
-        'value' => 'voice',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 12,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_person_contact_pref',
-    'label' => 'I prefer to be contacted by',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 5,
     ),
   );
 
@@ -159,17 +319,7 @@ function ride_request_field_default_field_instances() {
   // Exported field_instance: 'node-ride_request-field_ride_current_location'
   $field_instances['node-ride_request-field_ride_current_location'] = array(
     'bundle' => 'ride_request',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'node|ride_request|field_ride_current_location|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'administrative_area' => '',
-        'postal_code' => '',
-        'country' => 'US',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -207,8 +357,8 @@ function ride_request_field_default_field_instances() {
           'US' => 'US',
         ),
         'format_handlers' => array(
+          'address' => 'address',
           'address-hide-country' => 'address-hide-country',
-          'address' => 0,
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
@@ -287,17 +437,7 @@ function ride_request_field_default_field_instances() {
   // Exported field_instance: 'node-ride_request-field_ride_desired_location'
   $field_instances['node-ride_request-field_ride_desired_location'] = array(
     'bundle' => 'ride_request',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'node|ride_request|field_ride_desired_location|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'administrative_area' => '',
-        'postal_code' => '',
-        'country' => 'US',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -335,8 +475,8 @@ function ride_request_field_default_field_instances() {
           'US' => 'US',
         ),
         'format_handlers' => array(
-          'address' => 0,
-          'address-hide-country' => 0,
+          'address' => 'address',
+          'address-hide-country' => 'address-hide-country',
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
@@ -383,126 +523,6 @@ function ride_request_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 11,
-    ),
-  );
-
-  // Exported field_instance: 'node-ride_request-field_ride_email'
-  $field_instances['node-ride_request-field_ride_email'] = array(
-    'bundle' => 'ride_request',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'email',
-        'settings' => array(),
-        'type' => 'email_default',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_person_email',
-    'label' => 'Email',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'email',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'email_textfield',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-ride_request-field_ride_language'
-  $field_instances['node-ride_request-field_ride_language'] = array(
-    'bundle' => 'ride_request',
-    'default_value' => array(
-      0 => array(
-        'value' => 'english',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_person_language',
-    'label' => 'Language',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-ride_request-field_ride_name'
-  $field_instances['node-ride_request-field_ride_name'] = array(
-    'bundle' => 'ride_request',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 11,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_person_name',
-    'label' => 'Name',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 1,
     ),
   );
 
@@ -553,46 +573,6 @@ function ride_request_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-ride_request-field_ride_phone_number'
-  $field_instances['node-ride_request-field_ride_phone_number'] = array(
-    'bundle' => 'ride_request',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_person_phone_number',
-    'label' => 'Phone Number',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 4,
     ),
   );
 

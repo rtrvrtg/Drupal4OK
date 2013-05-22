@@ -1,5 +1,5 @@
-name = Drupal4OK
-description = Glue module for Drupal4OK
+name = Help4OK
+description = Glue module for help4ok.org site.
 core = 7.x
 
 ; contrib 

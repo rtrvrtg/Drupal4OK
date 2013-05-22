@@ -15,7 +15,7 @@ function housing_have_field_default_field_instances() {
     'bundle' => 'housing_have',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please provide any additional information you would like to share about your home.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -45,15 +45,15 @@ function housing_have_field_default_field_instances() {
     'label' => 'Details',
     'required' => 0,
     'settings' => array(
-      'display_summary' => 1,
-      'text_processing' => 1,
+      'display_summary' => 0,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
+        'rows' => 10,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
@@ -67,7 +67,7 @@ function housing_have_field_default_field_instances() {
     'bundle' => 'housing_have',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please indicate when your housing is first available and optionally show an end date when it is no longer available.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -160,7 +160,7 @@ function housing_have_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_select',
+      'type' => 'date_popup',
       'weight' => 2,
     ),
   );
@@ -170,7 +170,7 @@ function housing_have_field_default_field_instances() {
     'bundle' => 'housing_have',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please select all housing details that are applicable to your situation.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -211,7 +211,7 @@ function housing_have_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'Please check this box if you have filled the available spaces.',
+    'description' => 'When you run out of available space, please check this box to indicate there is no more room.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -248,7 +248,7 @@ function housing_have_field_default_field_instances() {
   $field_instances['node-housing_have-field_image'] = array(
     'bundle' => 'housing_have',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If you would like, you can provide a photo of your home to display with your listing.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -305,14 +305,14 @@ function housing_have_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_image',
-    'label' => 'Image',
+    'label' => 'Photo',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '5 MB',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 0,
@@ -457,7 +457,7 @@ function housing_have_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 26,
+      'weight' => 23,
     ),
   );
 
@@ -496,16 +496,20 @@ function housing_have_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 23,
+      'weight' => 24,
     ),
   );
 
   // Exported field_instance: 'node-housing_have-field_person_language'
   $field_instances['node-housing_have-field_person_language'] = array(
     'bundle' => 'housing_have',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'english',
+      ),
+    ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please indicate your primary language.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -523,7 +527,7 @@ function housing_have_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_person_language',
-    'label' => 'Language',
+    'label' => 'Preferred Language',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -533,7 +537,7 @@ function housing_have_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 25,
+      'weight' => 26,
     ),
   );
 
@@ -613,16 +617,20 @@ function housing_have_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 24,
+      'weight' => 25,
     ),
   );
 
   // Exported field_instance: 'node-housing_need-field_beds'
   $field_instances['node-housing_need-field_beds'] = array(
     'bundle' => 'housing_need',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please indicate how many people require housing.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -645,7 +653,7 @@ function housing_have_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_beds',
-    'label' => 'Beds required',
+    'label' => 'Number of People',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -696,7 +704,7 @@ function housing_have_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 9,
     ),
   );
 
@@ -735,16 +743,20 @@ function housing_have_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
   // Exported field_instance: 'node-housing_need-field_person_language'
   $field_instances['node-housing_need-field_person_language'] = array(
     'bundle' => 'housing_need',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'english',
+      ),
+    ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please indicate your primary language.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -762,7 +774,7 @@ function housing_have_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_person_language',
-    'label' => 'Language',
+    'label' => 'Preferred Language',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -772,7 +784,7 @@ function housing_have_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -852,7 +864,7 @@ function housing_have_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -879,7 +891,7 @@ function housing_have_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_preferences',
-    'label' => 'Preferences',
+    'label' => 'I need a house that:',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -932,22 +944,28 @@ function housing_have_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Beds required');
   t('Capacity');
   t('Date(s) Available');
   t('Details');
   t('Email');
   t('Filled');
   t('House Details');
+  t('I need a house that:');
   t('I prefer to be contacted by');
-  t('Image');
-  t('Language');
+  t('If you would like, you can provide a photo of your home to display with your listing.');
   t('Length of stay');
   t('Name');
+  t('Number of People');
   t('Phone Number');
-  t('Please check this box if you have filled the available spaces.');
+  t('Photo');
   t('Please enter in the number of people that you can accommodate. For example, 1 double bed (2 spaces) and 1 single bed (1 space) can usually be counted as 3 spaces maximum. ');
-  t('Preferences');
+  t('Please indicate how many people require housing.');
+  t('Please indicate when your housing is first available and optionally show an end date when it is no longer available.');
+  t('Please indicate your primary language.');
+  t('Please provide any additional information you would like to share about your home.');
+  t('Please select all housing details that are applicable to your situation.');
+  t('Preferred Language');
+  t('When you run out of available space, please check this box to indicate there is no more room.');
 
   return $field_instances;
 }

@@ -765,9 +765,6 @@ optgroup::-moz-focus-inner {
   left: 0;
   cursor: pointer;
 }
-#main-menu-container label:hover {
-  background: #555555;
-}
 #main-menu-container input[type="checkbox"] {
   visibility: hidden;
   width: 1px;

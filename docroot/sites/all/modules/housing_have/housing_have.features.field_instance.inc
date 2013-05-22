@@ -424,16 +424,139 @@ function housing_have_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-housing_need-field_beds'
+  $field_instances['node-housing_need-field_beds'] = array(
+    'bundle' => 'housing_need',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_beds',
+    'label' => 'Beds required',
+    'required' => 1,
+    'settings' => array(
+      'max' => '',
+      'min' => 1,
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-housing_need-field_preferences'
+  $field_instances['node-housing_need-field_preferences'] = array(
+    'bundle' => 'housing_need',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_preferences',
+    'label' => 'Preferences',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-housing_need-field_stay_length'
+  $field_instances['node-housing_need-field_stay_length'] = array(
+    'bundle' => 'housing_need',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_stay_length',
+    'label' => 'Length of stay',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('Beds required');
   t('Capacity');
   t('Date(s) Available');
   t('Details');
   t('Filled');
   t('House Details');
   t('Image');
+  t('Length of stay');
   t('Please check this box if you have filled the available spaces.');
   t('Please enter in the number of people that you can accommodate. For example, 1 double bed (2 spaces) and 1 single bed (1 space) can usually be counted as 3 spaces maximum. ');
+  t('Preferences');
 
   return $field_instances;
 }

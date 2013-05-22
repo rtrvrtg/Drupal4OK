@@ -77,7 +77,7 @@ function housing_have_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Need Bed';
+  $handler->display->display_options['title'] = 'People With Housing Needs';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -87,6 +87,14 @@ function housing_have_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '25';
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<a href="/node/add/housing-have" class="list-house">List My House</a>
+<p>Click here if you have space available at your home and would like to list it on the site.</p>';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -99,6 +107,8 @@ function housing_have_views_default_views() {
   $handler->display->display_options['fields']['field_preferences']['table'] = 'field_data_field_preferences';
   $handler->display->display_options['fields']['field_preferences']['field'] = 'field_preferences';
   $handler->display->display_options['fields']['field_preferences']['label'] = '';
+  $handler->display->display_options['fields']['field_preferences']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_preferences']['alter']['text'] = 'Needs housing that [field_preferences] ';
   $handler->display->display_options['fields']['field_preferences']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_preferences']['delta_offset'] = '0';
   /* Sort criterion: Content: Post date */
@@ -126,7 +136,7 @@ function housing_have_views_default_views() {
   $handler->display->display_options['filters']['field_preferences_value']['field'] = 'field_preferences_value';
   $handler->display->display_options['filters']['field_preferences_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_preferences_value']['expose']['operator_id'] = 'field_preferences_value_op';
-  $handler->display->display_options['filters']['field_preferences_value']['expose']['label'] = 'Preferences';
+  $handler->display->display_options['filters']['field_preferences_value']['expose']['label'] = 'My housing:';
   $handler->display->display_options['filters']['field_preferences_value']['expose']['operator'] = 'field_preferences_value_op';
   $handler->display->display_options['filters']['field_preferences_value']['expose']['identifier'] = 'field_preferences_value';
   $handler->display->display_options['filters']['field_preferences_value']['expose']['multiple'] = TRUE;
@@ -134,7 +144,6 @@ function housing_have_views_default_views() {
     2 => '2',
     1 => 0,
     3 => 0,
-    4 => 0,
   );
 
   /* Display: Page */

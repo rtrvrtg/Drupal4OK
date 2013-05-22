@@ -216,8 +216,8 @@ $databases = array (
     'default' => 
     array (
       'database' => 'drupal4ok',
-      'username' => 'root',
-      'password' => 'root',
+      'username' => 'drupal4ok',
+      'password' => 'drupal4ok',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
@@ -256,7 +256,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = '28l4prbYy65qu0mXK3T-Hs6zfMHtgYsyRR3tAL__a-M';
+$drupal_hash_salt = 'XO3JrZlqLaS8IGDO1Z0Sw4HrzdQnT_YgZEy4ekr5Pwc';
 
 /**
  * Base URL (optional).

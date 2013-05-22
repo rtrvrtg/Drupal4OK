@@ -10,35 +10,23 @@
 function housing_have_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
-  $field_bases['body'] = array(
+  // Exported field_base: 'field_beds'
+  $field_bases['field_beds'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
-    'entity_types' => array(
-      0 => 'node',
+    'entity_types' => array(),
+    'field_name' => 'field_beds',
+    'field_permissions' => array(
+      'type' => 0,
     ),
-    'field_name' => 'body',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
+    'foreign keys' => array(),
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'field_permissions' => NULL,
-    ),
-    'translatable' => 1,
-    'type' => 'text_with_summary',
+    'module' => 'number',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'number_integer',
   );
 
   // Exported field_base: 'field_date_from'
@@ -187,6 +175,68 @@ function housing_have_field_default_field_bases() {
     ),
     'translatable' => 1,
     'type' => 'number_integer',
+  );
+
+  // Exported field_base: 'field_preferences'
+  $field_bases['field_preferences'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_preferences',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'cats' => 'Cats',
+        'dogs' => 'Dogs',
+        'children' => 'Children',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_stay_length'
+  $field_bases['field_stay_length'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_stay_length',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        1 => 'Emergency (1-5 days)',
+        2 => 'Short 1-3 weeks',
+        3 => 'Medium (3-6 weeks)',
+        4 => 'Long (6 weeks +)',
+        5 => 'Not sure',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   return $field_bases;

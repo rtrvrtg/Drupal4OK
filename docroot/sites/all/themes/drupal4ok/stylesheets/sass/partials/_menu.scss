@@ -85,6 +85,10 @@ $menu-text: #fff;
 }
 
 #front-menu {
+  h2 {
+    display: none;
+  }
+
   ul {
     width: 100%;
     li {

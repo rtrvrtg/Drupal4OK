@@ -811,6 +811,9 @@ optgroup::-moz-focus-inner {
   max-height: 9999px;
 }
 
+#front-menu h2 {
+  display: none;
+}
 #front-menu ul {
   width: 100%;
 }

@@ -3,8 +3,6 @@ $menu-divider: #333;
 $menu-hover: #555;
 $menu-text: #fff;
 
-$menu-toggle-height: 2em;
-
 @mixin menu-reset {
   display: block;
   width: 100%;
@@ -44,7 +42,7 @@ $menu-toggle-height: 2em;
     width: 100%;
     height: 1em;
     line-height: 1em;
-    font-size: $menu-toggle-height;
+    font-size: $base-rhythm-unit;
     background: $menu-divider;
     color: #ccc;
     position: absolute;
@@ -97,7 +95,7 @@ $menu-toggle-height: 2em;
 
   input[type="checkbox"]:checked ~ ul {
     max-height: 9999px;
-    padding-bottom: $menu-toggle-height;
+    padding-bottom: $base-rhythm-unit;
     border-top: 1px solid $menu-divider;
   }
 }

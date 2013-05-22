@@ -14,7 +14,7 @@ $menu-text: #fff;
 
 #main-menu-container {
   background: $menu-bg;
-  z-index: 9999;
+  z-index: 5;
 
   @include menu-reset;
 
@@ -37,6 +37,10 @@ $menu-text: #fff;
     cursor: pointer;
     
     // text-indent: 9999px;
+
+    &:hover {
+      background: $menu-hover;
+    }
   }
 
   input[type="checkbox"] {
@@ -77,5 +81,35 @@ $menu-text: #fff;
 
   input[type="checkbox"]:checked ~ ul {
     max-height: 9999px;
+  }
+}
+
+#front-menu {
+  ul {
+    width: 100%;
+    li {
+      width: 48%;
+      padding: 1%;
+      float: left;
+      display: table;
+      a {
+        display: table-cell;
+        width: 100%;
+        background-color: $dark-blue;
+        vertical-align: middle;
+        padding: .25em;
+        color: $white;
+        text-decoration: none;
+        @include adjust-font-size-to(50px);
+        &.give {
+          background-color: $light-blue;
+        }
+        strong {
+          display: block;
+          font-size: 130%;
+          font-weight: normal;
+        }
+      }
+    }
   }
 }

@@ -22,7 +22,7 @@ function rider_locations_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Rider Locations';
+  $handler->display->display_options['title'] = 'Rider Locations Map';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -41,10 +41,6 @@ function rider_locations_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Geofield */
-  $handler->display->display_options['fields']['field_geofield']['id'] = 'field_geofield';
-  $handler->display->display_options['fields']['field_geofield']['table'] = 'field_data_field_geofield';
-  $handler->display->display_options['fields']['field_geofield']['field'] = 'field_geofield';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -62,11 +58,11 @@ function rider_locations_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'fake_ct' => 'fake_ct',
+    'ride_request' => 'ride_request',
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Rider Locations List */
+  $handler = $view->new_display('page', 'Rider Locations List', 'page');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -81,24 +77,13 @@ function rider_locations_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Geofield */
-  $handler->display->display_options['fields']['field_geofield']['id'] = 'field_geofield';
-  $handler->display->display_options['fields']['field_geofield']['table'] = 'field_data_field_geofield';
-  $handler->display->display_options['fields']['field_geofield']['field'] = 'field_geofield';
-  $handler->display->display_options['fields']['field_geofield']['label'] = '';
-  $handler->display->display_options['fields']['field_geofield']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_geofield']['click_sort_column'] = 'wkt';
-  $handler->display->display_options['fields']['field_geofield']['type'] = 'geofield_geojson';
-  $handler->display->display_options['fields']['field_geofield']['settings'] = array(
-    'data' => 'full',
-  );
   $handler->display->display_options['path'] = 'rider-locations';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
+  /* Display: Rider Locations Map */
+  $handler = $view->new_display('page', 'Rider Locations Map', 'page_1');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'leaflet';
-  $handler->display->display_options['style_options']['data_source'] = 'field_geofield';
+  $handler->display->display_options['style_options']['data_source'] = 'field_ride_current_loc_geo';
   $handler->display->display_options['style_options']['name_field'] = 'title';
   $handler->display->display_options['style_options']['description_field'] = 'title';
   $handler->display->display_options['style_options']['map'] = 'OSM Mapnik';
@@ -133,15 +118,15 @@ function rider_locations_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Geofield */
-  $handler->display->display_options['fields']['field_geofield']['id'] = 'field_geofield';
-  $handler->display->display_options['fields']['field_geofield']['table'] = 'field_data_field_geofield';
-  $handler->display->display_options['fields']['field_geofield']['field'] = 'field_geofield';
-  $handler->display->display_options['fields']['field_geofield']['label'] = '';
-  $handler->display->display_options['fields']['field_geofield']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_geofield']['click_sort_column'] = 'wkt';
-  $handler->display->display_options['fields']['field_geofield']['type'] = 'geofield_geojson';
-  $handler->display->display_options['fields']['field_geofield']['settings'] = array(
+  /* Field: Content: Current Location Geo */
+  $handler->display->display_options['fields']['field_ride_current_loc_geo']['id'] = 'field_ride_current_loc_geo';
+  $handler->display->display_options['fields']['field_ride_current_loc_geo']['table'] = 'field_data_field_ride_current_loc_geo';
+  $handler->display->display_options['fields']['field_ride_current_loc_geo']['field'] = 'field_ride_current_loc_geo';
+  $handler->display->display_options['fields']['field_ride_current_loc_geo']['label'] = '';
+  $handler->display->display_options['fields']['field_ride_current_loc_geo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ride_current_loc_geo']['click_sort_column'] = 'wkt';
+  $handler->display->display_options['fields']['field_ride_current_loc_geo']['type'] = 'geofield_geojson';
+  $handler->display->display_options['fields']['field_ride_current_loc_geo']['settings'] = array(
     'data' => 'full',
   );
   $handler->display->display_options['path'] = 'rider-locations-map';
